@@ -1,0 +1,9 @@
+token : x24ti5gi3x0ol2eh4esiuxias
+
+flag01:42hDRfypTqqnw
+apres ./John
+reponse : abcdefg
+
+
+user level01:x24ti5gi3x0ol2eh4esiuxias
+user flag01:abcdefg

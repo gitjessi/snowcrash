@@ -1,0 +1,11 @@
+mot de pass user : level00
+
+mot de passe trouve :cdiiddwpgswtgt
+apres ROT
+apres dechiffrage : nottoohardhere
+
+user level00:level00
+user flag00:nottoohardhere
+
+Token trouve = x24ti5gi3x0o12eh4esiuxias
+
