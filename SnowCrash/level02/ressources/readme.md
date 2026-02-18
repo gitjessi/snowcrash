@@ -94,3 +94,88 @@ trouver mot de pass
 
 Tu verras une liste de lignes (paquets).
 
+
+Deuxieme explication :
+
+
+Exercice 02
+
+connection : level02
+mot de pass :  f2av5il02puano7naaf6adaaf
+
+mot de pass trouve : ft_waNDReL0L
+token obtenu : kooda2puivaav1idi4f57q8iq
+
+comment proceder :
+tapez commande ls :
+fichier : level02.pcap
+
+fichier .cpap c'est quoi ? 
+
+Les fichiers PCAP (Packet Capture) sont des fichiers utilisés 
+pour capturer et stocker le trafic réseau.
+Ils contiennent les paquets de données ainsi que leurs en-têtes, 
+fournissant des informations essentielles comme l’heure, la source, 
+la destination et le protocole utilisé. 
+Ils sont largement utilisés en cybersécurité et en administration réseau pour le diagnostic, 
+l’analyse de performance et la détection d’activités malveillantes.
+
+Contenu du fichier illisible : caractere cache
+
+Dans terminal local 
+copier le fichier qui se touve dans la vm 
+scp -P 4242 level02@192.168.1.14:/home/level02/level02.pcap .
+
+scp -P <port> <name@Ip_vm:cheminDuFichier> <CheminLocalOuCopierLeFichier>
+
+Que faire ? Installer Wireshark (Wireshark permet une analyse graphique détaillée)
+ -> d'autres outils existent comme tcpdump offre une lecture en ligne de commande ou 
+CloudShark pour analyser les fichiers sans installation.
+
+lien installation : https://fr.linux-terminal.com/
+
+apres installation 
+tapez la commande : wireshark
+fenetre s'ouvre 
+-> file > choisir file > open
+clique droit sur un TCP -> follow -> TCP stream
+
+recherche mot en clair mot de pass :  ft_wandr...NDReL0l.L
+. = backspace (a transforme)
+mot de passe reel = ft_waNDReL0L
+
+Wireshark permet de voir et analyser toutes les données réseau qui ne sont pas chiffrées
+
+Info : 
+
+TELNET est un protocole applicatif qui utilise TCP. pas de securite
+Il sert à :
+se connecter à distance à une machine
+taper des commandes
+comme un terminal distant (tout est en clair)
+
+Aujourdhui SSH (Secure Shell) = chiffrement (securise)
+
+FTP (File Transfer Protocol) = fichiers en clair
+👉 Il sert à :
+envoyer
+recevoir
+gérer des fichiers à distance
+
+Particularité FTP
+2 connexions TCP :
+Contrôle (login, commandes)
+Données (fichiers)
+
+⚠️ Problème de sécurité
+
+Login en clair :
+Mot de passe lisible
+Fichiers lisibles aussi
+
+Aujourdhui on utilise SFTP / FTPS = chiffrement (securise)
+
+TCP (Transmission Control Protocol) = transporteur de donnee dans lordre et controle les pertes en chemin
+
+Aujourdhui TCP + TLS (Transport Layer Security) = (certificats);
+
